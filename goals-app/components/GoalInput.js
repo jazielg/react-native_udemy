@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { Text, View, Button, TextInput, StyleSheet } from "react-native";
 
 const GoalInput = (props) => {
