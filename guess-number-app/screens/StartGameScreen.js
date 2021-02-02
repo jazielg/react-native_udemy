@@ -47,7 +47,7 @@ const StartGameScreen = (props) => {
     return () => {
       Dimensions.removeEventListener("change", updateLayout);
     };
-  }, []);
+  });
 
   const confirmInputHandler = () => {
     const chosenNumber = parseInt(enteredValue);
