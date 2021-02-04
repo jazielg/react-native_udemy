@@ -9,7 +9,7 @@ const CategoriesScreen = (props) => {
         title="Go to meal"
         onPress={() => {
           props.navigation.navigate({
-            routeName: "CategoryMealScreen",
+            routeName: "CategoryMeals",
           });
         }}
       />
