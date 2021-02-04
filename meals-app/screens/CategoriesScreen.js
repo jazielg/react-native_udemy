@@ -11,6 +11,8 @@ const CategoriesScreen = (props) => {
           props.navigation.navigate({
             routeName: "CategoryMeals",
           });
+
+          // props.navigation.replace("CategoryMeals");
         }}
       />
     </View>
