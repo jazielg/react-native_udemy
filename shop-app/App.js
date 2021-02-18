@@ -3,12 +3,15 @@ import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
+// import { composeWithDevTools } from "redux-devtools-extension";
 
 import ShopNavigator from "./navigation/ShopNavigator";
+import CartReducer from "./store/reducers/cart";
 import ProductsReducer from "./store/reducers/products";
 
 const rootReducer = combineReducers({
   products: ProductsReducer,
+  cart: CartReducer,
 });
 
 const store = createStore(rootReducer);
