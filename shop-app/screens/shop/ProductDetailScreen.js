@@ -26,7 +26,7 @@ const ProductDetailScreen = (props) => {
         <Button
           color={Colors.primary}
           title="Add to Cart"
-          onPress={() => dispatch(cartActions.addToCart(selectedProducte))}
+          onPress={() => dispatch(cartActions.addToCart(selectedProduct))}
         />
       </View>
       <Text style={styles.price}>${selectedProduct.price.toFixed(2)}</Text>

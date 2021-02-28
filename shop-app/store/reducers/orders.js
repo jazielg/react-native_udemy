@@ -1,5 +1,5 @@
-import Order from "../../models/order";
 import { ADD_ORDER } from "../actions/orders";
+import Order from "../../models/order";
 
 const initialState = {
   orders: [],
@@ -11,7 +11,7 @@ export default (state = initialState, action) => {
       const newOrder = new Order(
         new Date().toString(),
         action.orderData.items,
-        actions.orderData.amount,
+        action.orderData.amount,
         new Date()
       );
       return {
