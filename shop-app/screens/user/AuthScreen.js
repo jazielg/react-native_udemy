@@ -1,4 +1,4 @@
-import React, { useCallback, useReducer } from "react";
+import React, { useCallback, useReducer, useState } from "react";
 import {
   Button,
   KeyboardAvoidingView,
@@ -40,6 +40,8 @@ const formReducer = (state, action) => {
 };
 
 const AuthScreen = (props) => {
+  const [isSignup, setIsSignup] = useState(false);
+
   const dispatch = useDispatch();
 
   const [formState, dispatchFormState] = useReducer(formReducer, {
@@ -54,13 +56,20 @@ const AuthScreen = (props) => {
     formIsValid: false,
   });
 
-  const signupHandler = () => {
-    dispatch(
-      authActions.Signup(
+  const authHandler = () => {
+    let action;
+    if (isSignup) {
+      action = authActions.signup(
         formState.inputValues.email,
         formState.inputValues.password
-      )
-    );
+      );
+    } else {
+      action = authActions.login(
+        formState.inputValues.email,
+        formState.inputValues.password
+      );
+    }
+    dispatch(action);
   };
 
   const inputChangeHandler = useCallback(
@@ -111,16 +120,18 @@ const AuthScreen = (props) => {
           </ScrollView>
           <View style={styles.buttonContainer}>
             <Button
-              title="Login"
+              title={isSignup ? "Sign Up" : "Login"}
               color={Colors.primary}
-              onPress={signupHandler}
+              onPress={authHandler}
             />
           </View>
           <View style={styles.buttonContainer}>
             <Button
-              title="Switch to Sign Up"
+              title={`Switch to ${isSignup ? "Login" : "Sign Up"}`}
               color={Colors.accent}
-              onPress={() => {}}
+              onPress={() => {
+                setIsSignup((prevState) => !prevState);
+              }}
             />
           </View>
         </Card>
