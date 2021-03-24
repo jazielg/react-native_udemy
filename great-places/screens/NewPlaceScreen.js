@@ -1,18 +1,25 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput, Button } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+import { useDispatch } from "react-redux";
 
+import * as placesActions from "../store/places-actions";
 import Colors from "../constants/Colors";
 
 const NewPlaceScreen = (props) => {
   const [titleValue, setTitleValue] = useState("");
+
+  const dispatch = useDispatch();
 
   const titleChangeHandler = (text) => {
     // you could add validation
     setTitleValue(text);
   };
 
-  const savePlaceHnadler = () => {};
+  const savePlaceHnadler = () => {
+    dispatch(placesActions.addPlace(titleValue));
+    props.navigation.goBack();
+  };
 
   return (
     <ScrollView>
