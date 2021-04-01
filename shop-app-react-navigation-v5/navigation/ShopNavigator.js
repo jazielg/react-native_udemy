@@ -1,6 +1,9 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import { createDrawerNavigator } from "@react-navigation/drawer";
+import {
+  createDrawerNavigator,
+  DrawerItemList,
+} from "@react-navigation/drawer";
 import { Platform, SafeAreaView, Button, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useDispatch } from "react-redux";
@@ -157,50 +160,119 @@ export const AdminNavigator = () => {
 //   }
 // );
 
-const ShopNavigator = createDrawerNavigator(
-  {
-    Products: ProductsNavigator,
-    Orders: OrdersNavigator,
-    Admin: AdminNavigator,
-  },
-  {
-    contentOptions: {
-      activeTintColor: Colors.primary,
-    },
-    contentComponent: (props) => {
-      const dispatch = useDispatch();
-      return (
-        <View style={{ flex: 1, paddingTop: 20 }}>
-          <SafeAreaView forceInset={{ top: "always", horizontal: "never" }}>
-            <DrawerNavigatorItems {...props} />
-            <Button
-              title="Logout"
-              color={Colors.primary}
-              onPress={() => {
-                dispatch(authActions.logout());
-                // props.navigation.navigate("Auth");
-              }}
+const ShopDrawerNavigator = createDrawerNavigator();
+
+const ShopNavigator = () => {
+  const dispatch = useDispatch();
+  return (
+    <ShopDrawerNavigator.Navigator
+      drawerContent={{
+        activeTintColor: Colors.primary,
+      }}
+      drawerContentOptions={(props) => {
+        return (
+          <View style={{ flex: 1, paddingTop: 20 }}>
+            <SafeAreaView forceInset={{ top: "always", horizontal: "never" }}>
+              <DrawerItemList {...props} />
+              <Button
+                title="Logout"
+                color={Colors.primary}
+                onPress={() => {
+                  dispatch(authActions.logout());
+                }}
+              />
+            </SafeAreaView>
+          </View>
+        );
+      }}
+    >
+      <ShopDrawerNavigator.Screen
+        name="Products"
+        component={ProductsNavigator}
+        options={{
+          drawerIcon: (props) => (
+            <Ionicons
+              name={Platform.OS === "android" ? "md-cart" : "ios-cart"}
+              size={23}
+              color={props.color}
             />
-          </SafeAreaView>
-        </View>
-      );
-    },
-  }
-);
+          ),
+        }}
+      />
+      <ShopDrawerNavigator.Screen
+        name="Orders"
+        component={OrdersNavigator}
+        options={{
+          drawerIcon: (props) => (
+            <Ionicons
+              name={Platform.OS === "android" ? "md-list" : "ios-list"}
+              size={23}
+              color={props.color}
+            />
+          ),
+        }}
+      />
+      <ShopDrawerNavigator.Screen
+        name="Admin"
+        component={AdminNavigator}
+        options={{
+          drawerIcon: (props) => (
+            <Ionicons
+              name={Platform.OS === "android" ? "md-create" : "ios-create"}
+              size={23}
+              color={props.color}
+            />
+          ),
+        }}
+      />
+    </ShopDrawerNavigator.Navigator>
+  );
+};
 
-const AuthNavigator = createStackNavigator(
-  {
-    Auth: AuthScreen,
-  },
-  {
-    defaultNavigationOptions: defaulttNavOptions,
-  }
-);
+// const ShopNavigator = createDrawerNavigator(
+//   {
+//     Products: ProductsNavigator,
+//     Orders: OrdersNavigator,
+//     Admin: AdminNavigator,
+//   },
+//   {
+//     contentOptions: {
+//       activeTintColor: Colors.primary,
+//     },
+//     contentComponent: (props) => {
+//       const dispatch = useDispatch();
+//       return (
+//         <View style={{ flex: 1, paddingTop: 20 }}>
+//           <SafeAreaView forceInset={{ top: "always", horizontal: "never" }}>
+//             <DrawerNavigatorItems {...props} />
+//             <Button
+//               title="Logout"
+//               color={Colors.primary}
+//               onPress={() => {
+//                 dispatch(authActions.logout());
+//                 // props.navigation.navigate("Auth");
+//               }}
+//             />
+//           </SafeAreaView>
+//         </View>
+//       );
+//     },
+//   }
+// );
 
-const MainNavigator = createSwitchNavigator({
-  Startup: StartupScreen,
-  Auth: AuthNavigator,
-  Shop: ShopNavigator,
-});
+// const AuthNavigator = createStackNavigator(
+//   {
+//     Auth: AuthScreen,
+//   },
+//   {
+//     defaultNavigationOptions: defaulttNavOptions,
+//   }
+// );
 
-export default createAppContainer(MainNavigator);
+// const MainNavigator = createSwitchNavigator({
+//   Startup: StartupScreen,
+//   Auth: AuthNavigator,
+//   Shop: ShopNavigator,
+// });
+
+// export default createAppContainer(MainNavigator);
