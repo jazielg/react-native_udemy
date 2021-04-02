@@ -168,10 +168,10 @@ export const ShopNavigator = () => {
   const dispatch = useDispatch();
   return (
     <ShopDrawerNavigator.Navigator
-      drawerContent={{
+      drawerContentOptions={{
         activeTintColor: Colors.primary,
       }}
-      drawerContentOptions={(props) => {
+      drawerContent={(props) => {
         return (
           <View style={{ flex: 1, paddingTop: 20 }}>
             <SafeAreaView forceInset={{ top: "always", horizontal: "never" }}>
