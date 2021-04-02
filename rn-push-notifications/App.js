@@ -35,6 +35,8 @@ export default function App() {
       .then((response) => {
         const token = response.data;
         setPushToken(token);
+        // https://docs.expo.io/push-notifications/sending-notifications/
+        // fetch('https://your-own-api.com/') - Some logic to save the token on database
       })
       .catch((err) => console.log(err));
   }, []);
