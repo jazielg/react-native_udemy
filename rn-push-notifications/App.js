@@ -26,8 +26,13 @@ export default function App() {
           throw new Error("Permission not granted!");
         }
       })
-      .then(() => {})
-      .catch((err) => null);
+      .then(() => {
+        return Notifications.getExpoPushTokenAsync();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   useEffect(() => {
