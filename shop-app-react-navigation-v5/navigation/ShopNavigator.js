@@ -35,7 +35,7 @@ import * as authActions from "../store/actions/auth";
 
 import Colors from "../constants/Colors";
 
-const defaulttNavOptions = {
+const defaultNavOptions = {
   headerStyle: {
     backgroundColor: Platform.OS === "android" ? Colors.primary : "",
   },
@@ -52,7 +52,7 @@ const ProductsStackNavigator = createStackNavigator();
 
 export const ProductsNavigator = () => {
   return (
-    <ProductsStackNavigator.Navigator screenOptions={defaulttNavOptions}>
+    <ProductsStackNavigator.Navigator screenOptions={defaultNavOptions}>
       <ProductsStackNavigator.Screen
         name="ProductsOverview"
         component={ProductsOverviewScreen}
@@ -88,7 +88,7 @@ export const ProductsNavigator = () => {
 //         />
 //       ),
 //     },
-//     defaultNavigationOptions: defaulttNavOptions,
+//     defaultNavigationOptions: defaultNavOptions,
 //   }
 // );
 
@@ -96,7 +96,7 @@ const OrdersStackNavigator = createStackNavigator();
 
 export const OrdersNavigator = () => {
   return (
-    <OrdersStackNavigator.Navigator screenOptions={defaulttNavOptions}>
+    <OrdersStackNavigator.Navigator screenOptions={defaultNavOptions}>
       <OrdersStackNavigator.Screen
         name="Orders"
         component={OrdersScreen}
@@ -120,7 +120,7 @@ export const OrdersNavigator = () => {
 //         />
 //       ),
 //     },
-//     defaultNavigationOptions: defaulttNavOptions,
+//     defaultNavigationOptions: defaultNavOptions,
 //   }
 // );
 
@@ -128,7 +128,7 @@ const AdminStackNavigator = createStackNavigator();
 
 export const AdminNavigator = () => {
   return (
-    <AdminStackNavigator screenOptions={defaulttNavOptions}>
+    <AdminStackNavigator.Navigator screenOptions={defaultNavOptions}>
       <AdminStackNavigator.Screen
         name="UserProducts"
         component={UserProductsScreen}
@@ -139,7 +139,7 @@ export const AdminNavigator = () => {
         component={EditProductScreen}
         options={EditProductScreenOptions}
       />
-    </AdminStackNavigator>
+    </AdminStackNavigator.Navigator>
   );
 };
 
@@ -158,7 +158,7 @@ export const AdminNavigator = () => {
 //         />
 //       ),
 //     },
-//     defaultNavigationOptions: defaulttNavOptions,
+//     defaultNavigationOptions: defaultNavOptions,
 //   }
 // );
 
@@ -266,7 +266,7 @@ const AuthStackNavigator = createStackNavigator();
 
 export const AuthNavigator = () => {
   return (
-    <AuthStackNavigator.Navigator screenOptions={defaulttNavOptions}>
+    <AuthStackNavigator.Navigator screenOptions={defaultNavOptions}>
       <AuthStackNavigator.Screen
         name="Auth"
         component={AuthScreen}
@@ -281,7 +281,7 @@ export const AuthNavigator = () => {
 //     Auth: AuthScreen,
 //   },
 //   {
-//     defaultNavigationOptions: defaulttNavOptions,
+//     defaultNavigationOptions: defaultNavOptions,
 //   }
 // );
 
