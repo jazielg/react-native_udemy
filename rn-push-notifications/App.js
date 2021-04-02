@@ -28,11 +28,24 @@ export default function App() {
       });
   }, []);
 
+  useEffect(() => {
+    const subscription = Notifications.addNotificationReceivedListener(
+      (notification) => {
+        console.log(notification);
+      }
+    );
+
+    return () => {
+      subscription.remove();
+    };
+  }, []);
+
   const triggerNotificationHandler = () => {
     Notifications.scheduleNotificationAsync({
       content: {
         title: "My first local notification",
         body: "This is the first local notification we are sending!",
+        data: { mySpecialData: "some data" },
       },
       trigger: {
         seconds: 10,
