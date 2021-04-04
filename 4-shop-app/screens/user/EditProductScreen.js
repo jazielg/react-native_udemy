@@ -6,10 +6,9 @@ import {
   Platform,
   ScrollView,
   StyleSheet,
-  Text,
   View,
 } from "react-native";
-import { Colors } from "react-native/Libraries/NewAppScreen";
+import { Colors } from "../../constants/Colors";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import { useDispatch, useSelector } from "react-redux";
 import HeaderButton from "../../components/UI/HeaderButton";

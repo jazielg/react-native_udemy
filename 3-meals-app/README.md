@@ -11,7 +11,7 @@
 
 ## 💻 Projeto
 
-Nesse projeto você navega entre as categorias de refeições, filtra as refeições, visualiza os ingredientes e modo de fazer, favorita uma refeição, e visualiza todas as refeições favoritas.
+Nesse projeto você navega entre as categorias de refeições, filtra as refeições, visualiza os ingredientes e modo de fazer, favorita uma refeição, e visualiza todas as refeições favoritadas.
 
 ## :rocket: Tecnologias
 
@@ -21,7 +21,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Expo](https://expo.io/)
 - [Expo Fonts](https://docs.expo.io/versions/latest/sdk/font/)
 - [Redux](https://redux.js.org)
-- [React Nativation](https://reactnavigation.org)
+- [React Navigation v4.x](https://reactnavigation.org/docs/4.x/getting-started)
 
 ## 🔨 Como usar
 
@@ -31,7 +31,7 @@ Para clonar essa aplicação, você vai precisar de [Git](https://git-scm.com/),
 
 ```bash
 # Diretório da API
-cd 2-guess-number-app
+cd 3-meals-app
 
 # Instalar dependências
 yarn install

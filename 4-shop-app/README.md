@@ -1,0 +1,49 @@
+# Shop App
+
+<h1 align="center">
+    <img alt="Categories" title="Categories" src=".github/auth.png" width="245px" />
+    <img alt="Products Overview" title="Products Overview" src=".github/productsOverview.png" width="245px" />
+    <img alt="Products Detail" title="Products Detail" src=".github/productsDetail.png" width="245px" />
+    <img alt="Cart" title="Cart" src=".github/cart.png" width="245px" />
+    <img alt="Orders" title="Orders" src=".github/orders.png" width="245px" />
+    <img alt="User Products" title="User Products" src=".github/userProducts.png" width="245px" />
+    <img alt="Edit Product" title="Edit Product" src=".github/editProduct.png" width="245px" />
+</h1>
+
+## 💻 Projeto
+
+Nesse projeto você visualiza todos os produtos e detalhes, adiciona no carrinho, e faz o pedido. Em admin você pode adiciona, edita e exclui o seu produto.
+
+## :rocket: Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- [React Native](https://reactnative.dev)
+- [Expo](https://expo.io/)
+- [Expo Fonts](https://docs.expo.io/versions/latest/sdk/font/)
+- [Redux](https://redux.js.org)
+- [Redux Thunk](https://github.com/reduxjs/redux-thunk)
+- [React Navigation v4.x](https://reactnavigation.org/docs/4.x/getting-started)
+- [Async Storage](https://react-native-async-storage.github.io/async-storage/docs/usage/)
+- [Firebase](https://firebase.google.com/?hl=pt-br)
+
+## 🔨 Como usar
+
+Para clonar essa aplicação, você vai precisar de [Git](https://git-scm.com/), Node.js v12+ e [Yarn](https://yarnpkg.com/) instalado.
+
+### Iniciar Aplicação
+
+```bash
+# Diretório da API
+cd 4-shop-app
+
+# Instalar dependências
+yarn install
+
+# Iniciar aplicação expo
+yarn start
+```
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.

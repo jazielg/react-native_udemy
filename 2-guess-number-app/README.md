@@ -16,7 +16,7 @@
 
 ## 💻 Projeto
 
-Nesse projeto você escolhe um número, e pressiona no botão de (-) ou (+) dependendo se a opção do oponente é maior ou menor que seu número escolhido.
+Nesse projeto você escolhe um número, e pressiona o botão de (-) ou (+) dependendo se a opção do oponente é maior ou menor que seu número escolhido. No final mostra quantas tentativas foram necessárias para acertar o número.
 
 ## :rocket: Tecnologias
 
