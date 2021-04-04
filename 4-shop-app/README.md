@@ -26,6 +26,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React Navigation v4.x](https://reactnavigation.org/docs/4.x/getting-started)
 - [Async Storage](https://react-native-async-storage.github.io/async-storage/docs/usage/)
 - [Firebase](https://firebase.google.com/?hl=pt-br)
+- [Expo Linear Gradient](https://docs.expo.io/versions/latest/sdk/linear-gradient/)
 
 ## 🔨 Como usar
 
@@ -43,7 +44,3 @@ yarn install
 # Iniciar aplicação expo
 yarn start
 ```
-
-## :memo: Licença
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.

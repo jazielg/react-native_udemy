@@ -14,7 +14,7 @@
 
 Nesse projeto você visualiza todos os produtos e detalhes, adiciona no carrinho, e faz o pedido. Em admin você pode adiciona, edita e exclui o seu produto.
 
-O projeto foi atualizado com a versão 5 do React Navigation, depois foi atualizado para utilizar push notification.
+O projeto foi atualizado com a versão 5 do React Navigation, depois foi atualizado para utilizar push notification quando alguem fez algum pedido para seu produto.
 
 ## :rocket: Tecnologias
 
@@ -28,6 +28,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React Navigation v5.x](https://reactnavigation.org/docs/getting-started)
 - [Async Storage](https://react-native-async-storage.github.io/async-storage/docs/usage/)
 - [Firebase](https://firebase.google.com/?hl=pt-br)
+- [Expo Linear Gradient](https://docs.expo.io/versions/latest/sdk/linear-gradient/)
 - [Expo Permissions](https://docs.expo.io/versions/latest/sdk/permissions/)
 - [Expo Notifications](https://docs.expo.io/versions/latest/sdk/notifications/)
 
